@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1 style="background-color: antiquewhite;color:blue;"font size="15"; font face= "微软雅黑"; color:red;>异常查询</h1>
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        <input type="text" name="searchthings" />
+        <input type="submit" value="Search" />
+    </form>
+</body>
+</html>
