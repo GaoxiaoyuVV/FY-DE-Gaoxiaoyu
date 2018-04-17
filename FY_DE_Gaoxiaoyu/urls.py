@@ -18,5 +18,6 @@ from django.urls import path
 from cmdb import views
 urlpatterns = [
    # path('admin/', admin.site.urls), 这个是admin后台的路由
-    path("index/",views.index),#这个是你的路由，重点是引号中的正则表达式和后面的业务函数。
+    path("",views.index),#这个是你的路由，重点是引号中的正则表达式和后面的业务函数。
+    path('index/', views.search),
 ]
