@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
+
 {% for b in blogs %}
-  <li>
-  {{ b.name }}--{{ b.description }}
-  </li>
+
+    <table width="100%">
+<tr>
+<td align="center">
+<font face="幼圆" color="BLUE" size="70">
+   {{ b.name }}
+</td>
+</tr>
+</table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <table width="100%">
+<tr>
+<td align="center">
+<font face="幼圆" color="BLACK" size="20">
+   {{ b.description }}
+    <br>
+    ---example---
+    <br>
+    {{ b.example }}
+</td>
+</tr>
+</table>
 {% endfor %}
 </body>
 </html>

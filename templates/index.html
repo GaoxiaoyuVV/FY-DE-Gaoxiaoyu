@@ -9,7 +9,14 @@
     <form action="/index/" method="post">
         {% csrf_token %}
         <input type="text" name="searchthings" />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search"name="Search" />
+
     </form>
+    <form action="/success/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+   <input type="file" name="myfile" value="myfile" />
+ <input type="submit" value="upload" name="upload"/>
+</form>
+
 </body>
 </html>

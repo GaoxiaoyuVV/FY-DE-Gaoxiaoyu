@@ -1,0 +1,12 @@
+AssertionError,Raised when an assert statement fails,,0
+FloatingPointError,"Raised when a floating point operation fails. This exception is always defined, but can only be raised when Python is configured with the --with-fpectl option, or the WANT_SIGFPE_HANDLER symbol is defined in the pyconfig.h file.",,0
+EoFError,Raised when the input() function hits an end-of-file condition (EOF) without reading any data. (N.B.: the io.IOBase.read() and io.IOBase.readline() methods return an empty string when they hit EOF.),,0
+GeneratorExit,Raised when a generator or coroutine is closed; see generator.close() and coroutine.close(). It directly inherits from BaseException instead of Exception since it is technically not an error.,,0
+IndexError,"Raised when a sequence subscript is out of range. (Slice indices are silently truncated to fall in the allowed range; if an index is not an integer, TypeError is raised.)","my_list = [1, 2, 3, 4, 5] print(my_list[len(my_list)])",0
+KeyError,Raised when a mapping (dictionary) key is not found in the set of existing keys.,"my_dict = {'host': 'http://bbs.fishc.com', 'port': '80'} print(my_dict['server']) ",0
+ConnectionRefusedError,"A subclass of ConnectionError, raised when a connection attempt is refused by the peer. Corresponds to errno ECONNREFUSED.",,0
+FileExistsError,Raised when trying to create a file or directory which already exists. Corresponds to errno EEXIST,,0
+FileNotFoundError,Raised when a file or directory is requested but doesn¡¯t exist. Corresponds to errno ENOENT,,0
+PermissionError,Raised when trying to run an operation without the adequate access rights - for example filesystem permissions. Corresponds to errno EACCES and EPERM.,,0
+ProcessLookupError,Raised when a given process doesn¡¯t exist. Corresponds to errno ESRCH.,,0
+TimeoutError,Raised when a system function timed out at the system level. Corresponds to errno ETIMEDOUT.,,0
