@@ -5,6 +5,6 @@ class Show(models.Model):
     name=models.CharField(max_length=1000)
     description = models.TextField(max_length=10000,default='')
     example = models.TextField(max_length=10000, default='')
-    hit=models.TextField(max_length=100)
+    hit=models.IntegerField(max_length=10000)
     #def __str__(self):
      #   return self.name
