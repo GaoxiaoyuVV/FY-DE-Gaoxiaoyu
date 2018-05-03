@@ -21,4 +21,5 @@ urlpatterns = [
     path("",views.index),#这个是你的路由，重点是引号中的正则表达式和后面的业务函数。
     path('index/', views.search),
     path('success/', views.MySQL),
+    path('echarts/',views.Echarts),
 ]

@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from cmdb.models import Show
+from cmdb import models
 import csv,os
+import json
 def index(request):
     return render(request,'index.html')
 def search(request):
@@ -34,5 +36,13 @@ def MySQL(request):
                     Show.objects.create(name=row[0], description=row[1],example=row[2],hit=row[3])
             return render(request, 'success.html')
         return render(request, 'uploadsuccess.html')
+def Echarts(request):
+    name_list = []
+    hit_list = []
+    for a in models.Show.objects.order_by('-hit')[:5]:
+        name_list.append(a.name)
+        hit_list.append(a.hit)
+    data=list(zip(name_list,hit_list))
+    return render(request, 'echarts.html',{ 'List':json.dumps(data)})
 
 

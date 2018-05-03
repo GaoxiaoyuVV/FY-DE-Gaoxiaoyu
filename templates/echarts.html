@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>显示图表</title>
+    <!-- 引入 echarts.js -->
+    <script type="text/javascript" src="/static/js/echarts.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 图表的配置
+        var List={{ List|safe }};
+        //alert(attr);
+        //alert(attr1);
+        var x_list=[];
+        var y_list=[];
+        for(var i=0;i<List.length;i++){
+            x_list.push(List[i][0]);
+            y_list.push(List[i][1]);
+        }
+            alert(x_list);
+            alert(y_list);
+
+        var option = {
+            title: {
+                text: 'python中的异常情况一览表'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data:  x_list
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: y_list
+            }]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

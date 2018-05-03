@@ -17,6 +17,9 @@
    <input type="file" name="myfile" value="myfile" />
  <input type="submit" value="upload" name="upload"/>
 </form>
-
+<form action="/echarts/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+ <input type="submit" value="生成图表" name="echarts"/>
+</form>
 </body>
 </html>
