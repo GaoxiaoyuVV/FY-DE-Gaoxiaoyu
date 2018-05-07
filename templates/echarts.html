@@ -31,14 +31,17 @@
             },
             tooltip: {},
             legend: {
-                data:['销量']
+                data:['异常次数']
             },
             xAxis: {
-                data:  x_list
-            },
+                data:  x_list,
+                axisLabel :{
+            interval:0
+}
+                },
             yAxis: {},
             series: [{
-                name: '销量',
+                name: '异常次数',
                 type: 'bar',
                 data: y_list
             }]
